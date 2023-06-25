@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleHome.css">
+    <link rel="icon" href="/assets/logoTd.svg">
+    <title>Todlist.</title>
+</head>
+<body>
+    <header>
+        <div class = "menu">
+            <div class="reloj">
+                <p class="fecha"></p>
+            </div>
+            <img src="/assets/profilePhoto.png" alt="" class="pp">
+            <img src="/assets/options.png" alt="" class = "options">
+        </div>
+    </header>
+
+    <main>
+
+        <h2 class="welc">Welcome back.</h2>        
+    
+        <div class="menu2">
+            <img src="/assets/addtask.svg" alt=""id="addButton" onclick="addTask()">
+            <input type="text" id="taskInput" placeholder="Add a task...">
+        </div>
+    
+    </main>
+
+    <ul id="taskList">
+        <!-- <li class="cheked">Task1</li> -->
+    </ul>
+    
+    <script src="homefunctions.js"></script>
+</body>
+<script src="date.js"></script>
+</html>
