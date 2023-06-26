@@ -76,6 +76,11 @@ header{
 main{
     margin-left: 20%;
     margin-top: 5%;
+    transition: all 0.3s ease;
+    
+    &.fullWidhtMode{
+        margin-left: 5%;
+    }
 }
 
 .menu2{
@@ -123,9 +128,28 @@ main{
 /* LISTA */
 
 ul{
-    margin-left: 15%;
+    margin-left: 18%;
     margin-top: 2%;
     margin-right: 10%;
+    transition: all 0.3s ease;
+
+    &.fullWidhtMode{
+        margin-left: 2%;
+        margin-right: 3%;
+    }
+}
+
+@media (max-width: 840px){
+    
+    ul{
+        margin-top: 4%;
+        margin-left: 10%;
+        
+        &.fullWidhtMode{
+            margin-left: -20px;
+            margin-right: 3%;
+        }
+    }
 }
 
 ul li{
@@ -194,68 +218,51 @@ ul li span:hover{
 
 /* SWITCH THEME */
 
-.switchTheme{
-    border: none;
-    background-color: #202020;
-    border-radius: 100px;
-    margin-left: 10px;
+.boton{
+    margin: 5px;
     display: flex;
     align-items: center;
-    position: relative;
-    cursor: pointer;
-    outline: none;
+    margin-left: 20px;
 }
 
-.switchTheme::after{
-    content: '';
-    display: block;
-    width: 24px;
-    height: 23px;
-    position: absolute;
+.lbl-switch{
+    margin-left: 10px;
+    display: inline-block;
+    width: 40px;
+    height: 25px;
     background-color: #D9D9D9;
-    top: 0;
-    left: 0;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+
+.lbl-switch::after{
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: #282828;
+    border-radius: 200px;
+    top: 3px;
+    left: 2px;
     right: unset;
-    border-radius: 20px;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 }
 
-.switchThemeActive{
-    border: none;
-    background-color: #202020;
-    border-radius: 100px;
-    margin-left: 10px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
-    outline: none;
+#switchTheme:checked~ .lbl-switch{
+    background-color: #282828;
+    transition: all 0.3s ease;
 }
 
-.switchThemeActive::after{
-    content: '';
-    display: block;
-    width: 24px;
-    height:23px;
-    position: absolute;
+#switchTheme:checked~ .lbl-switch::after{
     background-color: #D9D9D9;
-    top: 0;
     left: unset;
-    right: 0;
-    border-radius: 20px;
-    transition: all 0.2s ease;
+    right: 5px;
 }
 
-.switchTheme:active{
-    right: 0;
-    left: unset;
-}
-
-.switchTheme img{
-    padding-right: 2px;
-    padding-left: 2px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    width: 15px;
-    height: 15px;
+#switchTheme{
+    display: none;
 }

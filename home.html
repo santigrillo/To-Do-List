@@ -9,27 +9,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styleHome.css">
     <link rel="icon" href="/assets/logoTd.svg">
+
+    <link rel="stylesheet" href="styleHome.css">
     <title>Todlist.</title>
 </head>
 <body>
     <header id="head" >
         <div class = "menu">
+        
             <div class="reloj">
                 <p class="fecha" id ="dateheader"></p>
             </div>
-            <button class="switchTheme" id="switchTheme">
-                <img src="/assets/sun.svg" alt="">
-                <img src="/assets/moon.svg" alt="">
-            </button>
-            <!-- <div>
+
+            <div class="boton">
+                <input type="checkbox" id="switchTheme">
+                <label for="switchTheme" class="lbl-switch"></label>
+            </div>
+        
+            <div>
                 <span>Full width</span>
-            </div> -->
+                <button id="fullWidhtMode">Full Widht Button</button>
+            </div>
+        
         </div>
     </header>
 
-    <main>
+    <main id="main">
 
         <h2 class="welc" id="welc">Welcome back.</h2>        
     
@@ -40,10 +46,8 @@
     
     </main>
 
-    <ul id="taskList">
-        <!-- <li class="cheked">Task1</li> -->
-    </ul>
-    
+    <ul id="taskList"></ul>
+
     <script src="homefunctions.js"></script>
 </body>
 <script src="date.js"></script>

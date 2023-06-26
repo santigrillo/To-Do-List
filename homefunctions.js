@@ -45,7 +45,6 @@ showTasks();
 const switchbutton = document.querySelector("#switchTheme");
 
 switchbutton.addEventListener('click', ()=>{
-  switchbutton.classList.toggle('switchThemeActive');
 
   document.body.classList.toggle('lightTheme');
   
@@ -65,3 +64,13 @@ switchbutton.addEventListener('click', ()=>{
 
   document.getElementById('taskInput').classList.toggle('lightTheme');
 })
+
+//FULL WIDTH //
+const fullwidhtmode = document.getElementById('fullWidhtMode');
+
+fullwidhtmode.addEventListener("click", ()=>{
+  document.getElementById('taskList').classList.toggle('fullWidhtMode');
+  document.getElementById('main').classList.toggle('fullWidhtMode');
+})
+
+
