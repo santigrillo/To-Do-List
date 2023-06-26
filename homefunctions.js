@@ -38,3 +38,30 @@ function showTasks(){
 }
 
 showTasks();
+
+
+// Switch theme // 
+
+const switchbutton = document.querySelector("#switchTheme");
+
+switchbutton.addEventListener('click', ()=>{
+  switchbutton.classList.toggle('switchThemeActive');
+
+  document.body.classList.toggle('lightTheme');
+  
+  const header = document.getElementById('head');
+  header.classList.toggle('lightTheme');
+
+  const dateheader = document.getElementById("dateheader");
+  dateheader.classList.toggle('lightTheme');
+
+  const welcomeBack = document.getElementById("welc");
+  welcomeBack.classList.toggle('lightTheme');
+
+  const items = document.querySelectorAll('li');
+  for (let i = 0; i<items.length; i++){
+    items[i].classList.toggle('lightTheme');
+  }
+
+  document.getElementById('taskInput').classList.toggle('lightTheme');
+})

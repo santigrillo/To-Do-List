@@ -3,12 +3,21 @@ body{
     margin: 0;
     padding: 0;
     background-color:#202020;
+    transition: all 0.2s ease;
+    
+    &.lightTheme{
+        background-color: #F3F3F3;
+    }
 }
 
 header{
     display: flex;
     background-color: #282828;
     padding: 4px;
+
+    &.lightTheme{
+        background-color: #F8F8F8;
+    }
 }
 
 .tit{
@@ -49,9 +58,17 @@ header{
     display: flex;
     font-size:0.7rem;
     font-weight: bold;
-    color: #FFFFFF;
     letter-spacing: 0.7px;
     margin-left: 10px;
+}
+
+.fecha{
+
+    color: #D9D9D9;
+
+    &.lightTheme{
+        color: #202020;
+    }
 }
 
 /* Main */
@@ -69,15 +86,23 @@ main{
 .welc{
     color: #9B9B9B;
     font-size: 1rem;
+
+    &.lightTheme{
+        color: #202020;
+    }
 }
 
 #taskInput{
     margin-left: 15px;
-    color: #9B9B9B;
+    color:#D9D9D9;
     background-color: transparent;
     border: 0;
     font-size: 0.8rem;
     width: 50%;
+
+    &.lightTheme{
+        color: #202020;
+    }
 }
 
 #taskInput:focus{
@@ -115,7 +140,13 @@ ul li{
     align-items: center;
     color: #D9D9D9;
     margin-top: 10px;
+
+    &.lightTheme{
+        color: #202020;
+        background-color: #ECECEC;
+    }
 }
+
 
 ul li::before{
     content: '';
@@ -178,8 +209,8 @@ ul li span:hover{
 .switchTheme::after{
     content: '';
     display: block;
-    width: 35px;
-    height: 35px;
+    width: 36px;
+    height: 36px;
     position: absolute;
     background-color: #D9D9D9;
     top: 0;
@@ -187,6 +218,37 @@ ul li span:hover{
     right: unset;
     border-radius: 100%;
     transition: all 0.2s ease;
+}
+
+.switchThemeActive{
+    border: none;
+    background-color: #202020;
+    border-radius: 100px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+}
+
+.switchThemeActive::after{
+    content: '';
+    display: block;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    background-color: #D9D9D9;
+    top: 0;
+    left: unset;
+    right: 0;
+    border-radius: 100%;
+    transition: all 0.2s ease;
+}
+
+.switchTheme:active{
+    right: 0;
+    left: unset;
 }
 
 .switchTheme img{
