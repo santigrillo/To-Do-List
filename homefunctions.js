@@ -14,6 +14,7 @@ function addTask(){
       let del = document.createElement('span');
       del.innerHTML = "\u00d7";
       li.appendChild(del);
+      saveData();
     }
     taskInput.value = '';    
 }
@@ -21,9 +22,19 @@ function addTask(){
 taskList.addEventListener('click', function(event){
   if(event.target.tagName === "LI"){
     event.target.classList.toggle("cheked");
+    saveData();
   } else if(event.target.tagName === "SPAN"){
     event.target.parentNode.remove();
+    saveData();
   }
 }, false);
 
+function saveData(){
+  localStorage.setItem("data", taskList.innerHTML);
+}
 
+function showTasks(){
+  taskList.innerHTML = localStorage.getItem("data");
+}
+
+showTasks();
