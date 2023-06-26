@@ -104,6 +104,15 @@ ul{
     }
 }
 
+@media (max-width:1366px){
+    ul{
+        margin-left: 17%;
+        &.fullWidhtMode{
+            margin-left: 2%;
+            margin-right: 3%;
+        }
+    }
+}
 
 @media (max-width:1366px){
     ul{
