@@ -1,24 +1,22 @@
+
+
+:root{
+    color-scheme: light dark;
+}
+
 body{
     font-family: 'Montserrat', sans-serif;    
     margin: 0;
     padding: 0;
-    background-color:#202020;
+    background-color: var(--background-Color);
     transition: all 0.2s ease;
-    
-    &.lightTheme{
-        background-color: #F3F3F3;
-    }
 }
 
 header{
     display: flex;
-    background-color: #282828;
+    background-color: var(--headerBackground);
     padding: 4px;
 
-
-    &.lightTheme{
-        background-color: #F8F8F8;
-    }
 }
 
 .tit{
@@ -43,12 +41,7 @@ header{
 }
 
 .fecha{
-
-    color: #D9D9D9;
-
-    &.lightTheme{
-        color: #202020;
-    }
+    color: var(--textColor);
 }
 
 /* Main */
@@ -69,25 +62,17 @@ main{
 }
 
 .welc{
-    color: #9B9B9B;
+    color: var(--textColor);
     font-size: 1rem;
-
-    &.lightTheme{
-        color: #202020;
-    }
 }
 
 #taskInput{
     margin-left: 15px;
-    color:#D9D9D9;
+    color:var(--textColor);
     background-color: transparent;
     border: 0;
     font-size: 0.8rem;
     width: 50%;
-
-    &.lightTheme{
-        color: #202020;
-    }
 }
 
 #taskInput:focus{
@@ -120,6 +105,16 @@ ul{
 }
 
 
+@media (max-width:1366px){
+    ul{
+        margin-left: 17%;
+        &.fullWidhtMode{
+            margin-left: 2%;
+            margin-right: 3%;
+        }
+    }
+}
+
 @media (max-width: 940px){
     ul{
         margin-left: 15%;
@@ -138,16 +133,11 @@ ul li{
     user-select: none;
     cursor: pointer;
     position: relative;
-    background-color:#282828;
+    background-color:var(--ulBackground);
     display: flex;
     align-items: center;
-    color: #D9D9D9;
+    color: var(--textColor);
     margin-top: 10px;
-
-    &.lightTheme{
-        color: #202020;
-        background-color: #ECECEC;
-    }
 }
 
 
@@ -297,11 +287,29 @@ ul li span:hover{
 }
 
 .options{
-    color: #D9D9D9;
+    color: var(--textColor);
     font-size: 0.9rem;
     font-weight: bold;
-
-    &.lighTtheme{
-        color: #282828;
-    }
+    position: relative;
 }
+
+#dark-mode-toggle-1{
+    margin-left: 20px;
+}
+
+/* ANIMACION SUBRAYADO
+
+.options::after{
+    content: '';
+    background: #D9D9D9;
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 95%; height: 1px;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.options:hover::after{
+    opacity: 1;
+    transform: translateY(2px);   
+} */

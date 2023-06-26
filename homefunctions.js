@@ -1,3 +1,5 @@
+
+
 //HOME//
 
 const taskInput = document.getElementById("taskInput");   //Descripcion de tarea.
@@ -19,6 +21,12 @@ function addTask(){
     taskInput.value = '';    
 }
 
+window.addEventListener("keydown", (e)=>{
+  if (e.keyCode=== 13){
+    addTask();
+  }
+})
+
 taskList.addEventListener('click', function(event){
   if(event.target.tagName === "LI"){
     event.target.classList.toggle("cheked");
@@ -39,39 +47,6 @@ function showTasks(){
 
 showTasks();
 
-
-// Switch theme // 
-
-const switchbutton = document.querySelector("#switchTheme");
-
-switchbutton.addEventListener('click', ()=>{
-
-  document.body.classList.toggle('lightTheme');
-  
-  const header = document.getElementById('head');
-  header.classList.toggle('lightTheme');
-
-  const dateheader = document.getElementById("dateheader");
-  dateheader.classList.toggle('lightTheme');
-
-  const welcomeBack = document.getElementById("welc");
-  welcomeBack.classList.toggle('lightTheme');
-
-  const items = document.querySelectorAll('li');
-  for (let i = 0; i<items.length; i++){
-    items[i].classList.toggle('lightTheme');
-  }
-
-  const options = document.getElementsByClassName("options");
-  for (let i = 0; i<options.length; i++){
-  options[i].classList.toggle('lighTtheme');
-  }
-
-  const icon = document.getElementById('themeIcon');
-  icon.src = "/assets/moon.svg";
-
-  document.getElementById('taskInput').classList.toggle('lightTheme');
-}, false)
 
 //FULL WIDTH //
 const fullwidhtmode = document.getElementById('fullwidthmode');
