@@ -209,14 +209,14 @@ ul li span:hover{
 .switchTheme::after{
     content: '';
     display: block;
-    width: 36px;
-    height: 36px;
+    width: 24px;
+    height: 23px;
     position: absolute;
     background-color: #D9D9D9;
     top: 0;
     left: 0;
     right: unset;
-    border-radius: 100%;
+    border-radius: 20px;
     transition: all 0.2s ease;
 }
 
@@ -235,14 +235,14 @@ ul li span:hover{
 .switchThemeActive::after{
     content: '';
     display: block;
-    width: 36px;
-    height: 36px;
+    width: 24px;
+    height:23px;
     position: absolute;
     background-color: #D9D9D9;
     top: 0;
     left: unset;
     right: 0;
-    border-radius: 100%;
+    border-radius: 20px;
     transition: all 0.2s ease;
 }
 
@@ -252,5 +252,10 @@ ul li span:hover{
 }
 
 .switchTheme img{
-    padding: 5px;
+    padding-right: 2px;
+    padding-left: 2px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 15px;
+    height: 15px;
 }
