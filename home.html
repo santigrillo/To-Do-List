@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="icon" href="/assets/logoTd.svg">
-
+    <link rel="icon" href="assets/logoTd.svg">
+    
     <link rel="stylesheet" href="styleHome.css">
     <title>Todlist.</title>
 </head>
@@ -22,16 +22,18 @@
                 <p class="fecha" id ="dateheader"></p>
             </div>
 
-            <div class="boton">
+            <div class="boton" id="contTheme">
+                <span class="options">Dark/Ligth Theme</span>
                 <input type="checkbox" id="switchTheme">
                 <label for="switchTheme" class="lbl-switch"></label>
             </div>
         
-            <div>
-                <span>Full width</span>
-                <button id="fullWidhtMode">Full Widht Button</button>
+            <div class="boton">
+                <span class="options">Full width</span>
+                <input type="checkbox" id="fullwidthmode">
+                <label for="fullwidthmode" class="lbl-width"></label>
             </div>
-        
+
         </div>
     </header>
 
@@ -40,7 +42,7 @@
         <h2 class="welc" id="welc">Welcome back.</h2>        
     
         <div class="menu2">
-            <img src="/To-Do-List/assets/addtask.svg" alt=""id="addButton" onclick="addTask()">
+            <img src="/assets/addtask.svg" alt=""id="addButton" onclick="addTask()">
             <input type="text" id="taskInput" placeholder="Add a task...">
         </div>
     

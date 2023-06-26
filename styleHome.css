@@ -15,6 +15,7 @@ header{
     background-color: #282828;
     padding: 4px;
 
+
     &.lightTheme{
         background-color: #F8F8F8;
     }
@@ -32,31 +33,10 @@ header{
     margin-right: 2%;
 }
 
-.pp{
-    width: 32px;
-    height: 32px;
-    margin-right: 10px;
-    margin-left: 15px;
-    transition: all 0.2s ease;
-}
-
-.pp:hover{
-    transform: scale(1.02);
-}
-
-.options{
-    width: 20px;
-    height: 20px;
-    transition: all 0.4s ease;
-}
-
-.options:hover{
-    transform: scale(1.15);
-}
 
 .reloj{
     display: flex;
-    font-size:0.7rem;
+    font-size:0.9rem;
     font-weight: bold;
     letter-spacing: 0.7px;
     margin-left: 10px;
@@ -128,34 +108,26 @@ main{
 /* LISTA */
 
 ul{
-    margin-left: 18%;
+    margin-left:18%;
     margin-top: 2%;
     margin-right: 10%;
     transition: all 0.3s ease;
 
     &.fullWidhtMode{
-        margin-left: 2%;
+        margin-left: 3%;
         margin-right: 3%;
     }
 }
 
-@media (max-width: 840px){
-    
+
+@media (max-width: 940px){
     ul{
-        margin-top: 4%;
-        margin-left: 10%;
-        
+        margin-left: 15%;
+
         &.fullWidhtMode{
-            margin-left: -20px;
+            margin-left: 0%;
             margin-right: 3%;
         }
-    }
-}
-
-@media (max-width: 840px){
-    ul{
-        margin-top: 4%;
-        margin-left: 10%;
     }
 }
 
@@ -267,9 +239,69 @@ ul li span:hover{
 #switchTheme:checked~ .lbl-switch::after{
     background-color: #D9D9D9;
     left: unset;
-    right: 5px;
+    right: 2px;
 }
 
 #switchTheme{
     display: none;
+}
+
+
+
+/* FULL WIDTH ICON */
+
+
+.lbl-width{
+    margin-left: 10px;
+    display: inline-block;
+    width: 40px;
+    height: 25px;
+    background-color: #D9D9D9;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.lbl-width::after{
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: #282828;
+    border-radius: 200px;
+    top: 3px;
+    left: 2px;
+    right: unset;
+    transition: all 0.3s ease;
+}
+
+#fullwidthmode:checked~ .lbl-width{
+    background-color: #D9D9D9;
+    transition: all 0.3s ease;
+}
+
+#fullwidthmode:checked~ .lbl-width::after{
+    background-color: #282828;
+    left: unset;
+    right: 2px;
+}
+
+#fullwidthmode{
+    display: none;
+}
+
+#fullwidthmode{
+    display: none;
+}
+
+.options{
+    color: #D9D9D9;
+    font-size: 0.9rem;
+    font-weight: bold;
+
+    &.lighTtheme{
+        color: #282828;
+    }
 }

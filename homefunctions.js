@@ -62,11 +62,19 @@ switchbutton.addEventListener('click', ()=>{
     items[i].classList.toggle('lightTheme');
   }
 
+  const options = document.getElementsByClassName("options");
+  for (let i = 0; i<options.length; i++){
+  options[i].classList.toggle('lighTtheme');
+  }
+
+  const icon = document.getElementById('themeIcon');
+  icon.src = "/assets/moon.svg";
+
   document.getElementById('taskInput').classList.toggle('lightTheme');
-})
+}, false)
 
 //FULL WIDTH //
-const fullwidhtmode = document.getElementById('fullWidhtMode');
+const fullwidhtmode = document.getElementById('fullwidthmode');
 
 fullwidhtmode.addEventListener("click", ()=>{
   document.getElementById('taskList').classList.toggle('fullWidhtMode');
