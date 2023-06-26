@@ -19,6 +19,12 @@ function addTask(){
     taskInput.value = '';    
 }
 
+window.addEventListener("keydown", (e)=>{
+  if (e.keyCode=== 13){
+    addTask();
+  }
+})
+
 taskList.addEventListener('click', function(event){
   if(event.target.tagName === "LI"){
     event.target.classList.toggle("cheked");
